@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | BookShop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/Style.css">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to right, #7a63f1, #a68cf1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-wrapper {
+      background: #fff;
+      padding: 3rem 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .login-wrapper h2 {
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      color: #333;
+    }
+
+    .login-wrapper input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .login-wrapper button {
+      width: 100%;
+      margin-top: 1rem;
+      background-color: #7a63f1;
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .login-wrapper button:hover {
+      background-color: #5c47d6;
+    }
+
+    .login-error {
+      color: #d32f2f;
+      margin-top: 1rem;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-wrapper">
+    <h2>Login to BookShop</h2>
+    <form id="loginForm">
+      <input type="email" id="loginEmail" placeholder="Email Address" required />
+      <input type="password" id="loginPassword" placeholder="Password" required />
+      <button type="submit">Login</button>
+      <p id="loginError" class="login-error">Invalid credentials. Try again.</p>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const email = document.getElementById("loginEmail").value;
+      const password = document.getElementById("loginPassword").value;
+
+      if (email === "admin@gmail.com" && password === "123456") {
+        document.getElementById("loginError").style.display = "none";
+        alert("✅ Logged in successfully!");
+        window.location.href = "home.html";
+      } else {
+        document.getElementById("loginError").style.display = "block";
+      }
+    });
+  </script>
+
+</body>
+</html>

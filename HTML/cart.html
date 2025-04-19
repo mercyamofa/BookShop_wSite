@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Cart - BookShop</title>
+  <link rel="stylesheet" href="../CSS/Style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">BookShop</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="book.html">Books</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+    <div class="actions">
+      <div class="cart-icon">
+        <img src="../assests/images/cart.svg" alt="Cart" width="24" />
+        <span id="cart-count">0</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Cart Section -->
+  <section class="cart-page">
+    <h2>Your Shopping Cart</h2>
+    <div id="fullCartItems" class="cart-items"></div>
+    
+    <div class="cart-summary">
+      <h3>Total: $<span id="fullCartTotal">0.00</span></h3>
+      <div class="cart-buttons">
+        <a href="book.html" class="btn-continue">Continue Shopping</a>
+        <button id="clearCartPage" class="btn-clear">Clear Cart</button>
+      </div>
+    </div>
+    
+  </section>
+
+  <!-- Toast Message -->
+  <div id="toast" class="toast"></div>
+
+  <script src="../JS/script.js"></script>
+</body>
+</html>

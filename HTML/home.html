@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BookShop</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/Style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">BookShop</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="book.html">Books</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+    <div class="actions">
+      <input type="text" id="searchBox" placeholder="Search books...">
+      <div class="cart-icon">
+        <img src="../assests/images/cart.svg" alt="Cart" width="24">
+        <span id="cart-count">0</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Discover Your Next Favorite Book</h1>
+      <p>Explore millions of books across various genres. Get free book shipping on orders over $25.</p>
+      <a href="book.html" class="btn-primary">Shop Now</a>
+      <a href="book.html" class="btn-outline">Browse Categories</a>
+    </div>
+    <div class="hero-img">
+      <img class="book-img" src="../assests/images/heroimage.png" alt="Stack of Books">
+    </div>
+  </section>
+
+  <!-- Featured Books -->
+  <section class="featured">
+    <h2>Featured Books</h2>
+    <div class="books">
+      <div class="book-card">
+        <img class="bookCard-img" src="../assests/images/img1.jpeg" alt="The Fiction Love"/>
+        <h4>The Fiction Love</h4>
+        <p>Trina Woods</p>
+        <div class="card-footer">
+          <span class="price">$22.00</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <img class="bookCard-img" src="../assests/images/img2.jpeg" alt="Mystery Thriller"/>
+        <h4>Mystery Thriller</h4>
+        <p>Sam Marks</p>
+        <div class="card-footer">
+          <span class="price">$22.00</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="book-card">
+        <img class="bookCard-img" src="../assests/images/img3.jpeg" alt="Self Help"/>
+        <h4>Self Help</h4>
+        <p>Mindful Living</p>
+        <div class="card-footer">
+          <span class="price">$22.00</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      
+      <div class="book-card">
+        <img class="bookCard-img" src="../assests/images/img4.jpeg" alt="Self Help"/>
+        <h4>Self Help</h4>
+        <p>Mindful Living</p>
+        <div class="card-footer">
+          <span class="price">$22.00</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      
+      <div class="book-card">
+        <img class="bookCard-img" src="../assests/images/img5.jpeg" alt="Self Help"/>
+        <h4>Self Help</h4>
+        <p>Mindful Living</p>
+        <div class="card-footer">
+          <span class="price">$22.00</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      
+      <div class="book-card">
+        <img class="bookCard-img" src="../assests/images/img6.jpeg" alt="Self Help"/>
+        <h4>Self Help</h4>
+        <p>Mindful Living</p>
+        <div class="card-footer">
+          <span class="price">$22.00</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+      
+      <div class="book-card">
+        <img class="bookCard-img" src="../assests/images/img9.jpg" alt="Self Help"/>
+        <h4>Self Help</h4>
+        <p>Mindful Living</p>
+        <div class="card-footer">
+          <span class="price">$22.00</span>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- More cards can be added here -->
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="categories">
+    <h2>Browse Categories</h2>
+    <div class="category-grid">
+      <div class="category-card">
+        <img src="../assests/images/fiction.svg" alt="Fiction Icon" />
+        <span>Fiction</span>
+      </div>
+      <div class="category-card">
+        <img src="../assests/images/book.svg" alt="Non-Fiction Icon" />
+        <span>Non-Fiction</span>
+      </div>
+      <div class="category-card">
+        <img src="../assests/images/child.svg" alt="Children Icon" />
+        <span>Children</span>
+      </div>
+      <div class="category-card">
+        <img src="../assests/images/academic.svg" alt="Academic Icon" />
+        <span>Academic</span>
+      </div>
+      <div class="category-card">
+        <img src="../assests/images/love.svg" alt="Romance Icon" />
+        <span>Romance</span>
+      </div>
+      <div class="category-card">
+        <img src="../assests/images/science.svg" alt="Sci-Fi Icon" />
+        <span>Sci-Fi</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promotions -->
+  <section class="promotions">
+    <div class="promo purple">
+      <h3>Summer Reading Sale</h3>
+      <p>Get 20% off on fiction bundles this summer!</p>
+      <button class="promo-btn outline1">Shop Now</button>
+    </div>
+    <div class="promo red">
+      <h3>Student Special</h3>
+      <p>10% discount on academic books with student ID</p>
+      <button class="promo-btn outline2">Learn More</button>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <h2>Subscribe to Our Newsletter</h2>
+    <p>Get the latest updates on new books, authors, and special offers.</p>
+    <form id="newsletterForm">
+      <input type="email" id="newsletterEmail" placeholder="Enter your email" required />
+      <button type="submit" class="btn-subscribe">Subscribe</button>
+    </form>
+    <p id="newsletterMsg" class="hidden">Thank you for subscribing! ✅</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-columns">
+      <div>
+        <h4>BookShop</h4>
+        <p>© 2025 Spark Creative. All rights reserved.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="#">Fiction</a></li>
+          <li><a href="#">Children</a></li>
+          <li><a href="#">Sci-Fi</a></li>
+          <li><a href="#">Academic</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect With Us</h4>
+        <img src="../assests/images/facebook.png" alt="facebook">
+        <img src="../assests/images/twitter.png" alt="twitter">
+        <img src="../assests/images/instagram.png" alt="instagram">
+      </div>
+    </div>
+  </footer>
+
+  <script src="../JS/script.js"></script>
+</body>
+</html>
