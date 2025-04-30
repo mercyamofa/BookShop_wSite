@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   updateCartCount();
   setupSearchFilter();
   initContactForm();
-  initLoginPopup();
+
   initNewsletterForm();
 
   if (document.getElementById("fullCartItems")) {
@@ -11,6 +11,21 @@ document.addEventListener("DOMContentLoaded", () => {
     setupClearCartButton();
   }
 });
+
+
+
+
+// Hamburger toggle
+
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  if (hamburgerBtn && mobileMenu) {
+    hamburgerBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+    });
+  }
+
 
 
 // 🔹 Add to Cart Logic
@@ -180,37 +195,6 @@ function initContactForm() {
 }
 
 
-// 🔹 Login Logic
-function initLoginPopup() {
-  const profileIcon = document.getElementById("profileIcon");
-  const loginPopup = document.getElementById("loginPopup");
-  const loginForm = document.getElementById("loginForm");
-  const loginError = document.getElementById("loginError");
-
-  if (profileIcon && loginPopup) {
-    profileIcon.addEventListener("click", () => {
-      loginPopup.classList.toggle("hidden");
-    });
-  }
-
-  if (loginForm) {
-    loginForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-
-      const email = document.getElementById("loginEmail").value;
-      const password = document.getElementById("loginPassword").value;
-
-      if (email === "admin@bookshop.com" && password === "123456") {
-        loginError.classList.add("hidden");
-        loginPopup.classList.add("hidden");
-        showToast("✅ Logged in successfully!");
-      } else {
-        loginError.classList.remove("hidden");
-      }
-    });
-  }
-}
-
 
 // 🔹 Newsletter Logic
 function initNewsletterForm() {
@@ -258,3 +242,11 @@ function showToast(message, duration = 2500) {
     toast.classList.remove("show");
   }, duration);
 }
+
+
+document.body.addEventListener('keydown', e => {
+  const target = e.target;
+  if ((target.matches('[tabindex][role="button"], [tabindex][role="link"], button, a')) && (e.key === 'Enter' || e.key === ' ')) {
+    target.click(); // Trigger click
+  }
+});

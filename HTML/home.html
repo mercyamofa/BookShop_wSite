@@ -9,27 +9,39 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../CSS/Style.css" />
+  
 </head>
 <body>
 
   <!-- Navbar -->
   <header class="navbar">
     <div class="logo">BookShop</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="book.html">Books</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="cart.html">Cart</a></li>
-      </ul>
-    </nav>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+    
+    <div id="mobileMenu" class="nav-links">
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="book.html">Books</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </nav>
+    </div>
+    
     <div class="actions">
-      <input type="text" id="searchBox" placeholder="Search books...">
-      <div class="cart-icon">
+      <div class="search-box">
+        <input type="text" id="searchBox" placeholder="Search books...">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+      <a href="cart.html" class="cart-icon">
         <img src="../assests/images/cart.svg" alt="Cart" width="24">
         <span id="cart-count">0</span>
-      </div>
+      </a>
     </div>
+    
   </header>
 
   <!-- Hero Section -->
@@ -50,8 +62,8 @@
     <h2>Featured Books</h2>
     <div class="books">
       <div class="book-card">
-        <img class="bookCard-img" src="../assests/images/img1.jpeg" alt="The Fiction Love"/>
-        <h4>The Fiction Love</h4>
+        <img class="bookCard-img" src="../assests/images/img1.jpeg" alt="Chamber of Secret"/>
+        <h4>Chamber of Secret</h4>
         <p>Trina Woods</p>
         <div class="card-footer">
           <span class="price">$22.00</span>
@@ -60,9 +72,9 @@
       </div>
 
       <div class="book-card">
-        <img class="bookCard-img" src="../assests/images/img2.jpeg" alt="Mystery Thriller"/>
-        <h4>Mystery Thriller</h4>
-        <p>Sam Marks</p>
+        <img class="bookCard-img" src="../assests/images/img2.jpeg" alt="Disolation Called Peace"/>
+        <h4>Disolation Called Peace</h4>
+        <p>Martine</p>
         <div class="card-footer">
           <span class="price">$22.00</span>
           <button class="add-to-cart">Add to Cart</button>
@@ -70,9 +82,9 @@
       </div>
 
       <div class="book-card">
-        <img class="bookCard-img" src="../assests/images/img3.jpeg" alt="Self Help"/>
-        <h4>Self Help</h4>
-        <p>Mindful Living</p>
+        <img class="bookCard-img" src="../assests/images/img3.jpeg" alt="Wind Up Girl"/>
+        <h4>Wind Up Girl</h4>
+        <p>Paolo</p>
         <div class="card-footer">
           <span class="price">$22.00</span>
           <button class="add-to-cart">Add to Cart</button>
@@ -80,9 +92,9 @@
       </div>
       
       <div class="book-card">
-        <img class="bookCard-img" src="../assests/images/img4.jpeg" alt="Self Help"/>
-        <h4>Self Help</h4>
-        <p>Mindful Living</p>
+        <img class="bookCard-img" src="../assests/images/img4.jpeg" alt="Apple Never Falls"/>
+        <h4>Apple Never Falls</h4>
+        <p>Liane</p>
         <div class="card-footer">
           <span class="price">$22.00</span>
           <button class="add-to-cart">Add to Cart</button>
@@ -91,8 +103,8 @@
       
       <div class="book-card">
         <img class="bookCard-img" src="../assests/images/img5.jpeg" alt="Self Help"/>
-        <h4>Self Help</h4>
-        <p>Mindful Living</p>
+        <h4>Japanese Lover</h4>
+        <p>Isabel</p>
         <div class="card-footer">
           <span class="price">$22.00</span>
           <button class="add-to-cart">Add to Cart</button>
@@ -100,9 +112,9 @@
       </div>
       
       <div class="book-card">
-        <img class="bookCard-img" src="../assests/images/img6.jpeg" alt="Self Help"/>
-        <h4>Self Help</h4>
-        <p>Mindful Living</p>
+        <img class="bookCard-img" src="../assests/images/img6.jpeg" alt="Half-Blood Prince"/>
+        <h4>Half-Blood Prince</h4>
+        <p>J.K Rowling</p>
         <div class="card-footer">
           <span class="price">$22.00</span>
           <button class="add-to-cart">Add to Cart</button>
@@ -110,9 +122,9 @@
       </div>
       
       <div class="book-card">
-        <img class="bookCard-img" src="../assests/images/img9.jpg" alt="Self Help"/>
-        <h4>Self Help</h4>
-        <p>Mindful Living</p>
+        <img class="bookCard-img" src="../assests/images/img7.jpg" alt="Harry Potter"/>
+        <h4>Harry Potter</h4>
+        <p>J.K Rowling</p>
         <div class="card-footer">
           <span class="price">$22.00</span>
           <button class="add-to-cart">Add to Cart</button>

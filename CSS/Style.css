@@ -116,7 +116,7 @@
 }
 
 
-/*   
+ 
   /* Animation Keyframes */
 @keyframes navFadeIn {
   from {
@@ -127,7 +127,7 @@
     opacity: 1;
     transform: translateY(0);
   }
-} */
+} 
 
 /* Target nav items */
 .navbar ul li {
@@ -164,8 +164,16 @@
     max-width: 500px;
   }
   .hero-text h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+   
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      white-space: normal; /* Allow it to wrap naturally */
+      overflow: visible;   /* Ensure text flows */
+      width: 100%;         /* Full width of the container */
+      border-right: none;  /* Remove typing cursor on small screens */
+      animation: none;     /* Disable typing effect on mobile */
+    
+    
   }
   .hero-text p {
     margin-bottom: 1.5rem;
@@ -176,7 +184,7 @@
     width: 0;
     border-right: 3px solid #0051ff;
     animation:
-      typing 2.5s steps(30, end) forwards,
+    typing 2.5s steps(30, end) forwards,
       blink 0.7s step-end 5 forwards,
       stop-cursor 0s 2.5s forwards;
   }
@@ -722,6 +730,15 @@ textarea:focus {
   .hidden {
     display: none !important;
   }
+
+a:focus,
+button:focus,
+input:focus,
+[tabindex]:focus {
+  outline: 2px solid #0051ff;
+  outline-offset: 2px;
+}
+
   .cart-page {
     max-width: 800px;
     margin: 4rem auto;
@@ -819,4 +836,274 @@ textarea:focus {
   #clearCartPage:hover {
     background-color: #d32f2f;
   }
+  /* === Responsive Enhancements === */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar .actions {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    justify-content: center; /* center vertically */
+    align-items: center;     /* center horizontally */
+    padding: 2rem 1rem;
+    text-align: center;
+    height: auto; /* remove fixed height */
+  }
   
+  .hero-text {
+    max-width: 100%;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  
+  .hero-text h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    white-space: normal;
+    overflow: visible;
+    width: 100%;
+    animation: none;
+    border-right: none;
+  }
+  
+  .hero-text p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-img {
+    display: none; /* hide image */
+  }
+  
+}
+
+  
+
+  .btn-primary, .btn-outline {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .books,
+  .category-grid,
+  .footer-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .book-card {
+    max-width: 100%;
+  }
+
+  .promotions {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .promo {
+    width: 100%;
+  }
+
+  .cart-page,
+  .contact-container {
+    padding: 1rem;
+  }
+
+  .cart-summary {
+    text-align: center;
+  }
+
+  .cart-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .footer {
+    text-align: center;
+  }
+
+  .footer-columns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .login-popup {
+    width: 90%;
+    right: 5%;
+  }
+}
+/* Hamburger styles */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #0051ff;
+}
+
+@media (max-width: 768px) {
+  .hero-img {
+    display: none;
+  }
+}
+
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  
+  nav {
+    display: none;
+    width: 100%;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+  }
+}
+
+
+/* === Hamburger === */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #0051ff;
+}
+
+/* Responsive Nav */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+
+  .nav-links nav {
+    display: none;
+    width: 100%;
+  }
+
+  .nav-links.active nav {
+    display: block;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+    height: auto;
+  }
+
+  .hero-img {
+    display: none;
+  }
+
+  .hero-text h1 {
+    font-size: 1.6rem;
+    width: 100%;
+  }
+
+  .books {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-columns {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+/* Group search bar and button */
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+  max-width: 300px;
+}
+
+.search-box input {
+  padding: 0.5rem;
+  border: none;
+  flex: 1;
+  font-size: 1rem;
+}
+
+.search-box button {
+  background: #0051ff;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+}
+
+/* Adjust on mobile */
+@media (max-width: 768px) {
+  .navbar .actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .search-box {
+    max-width: 100%;
+  }
+
+  .search-box input {
+    font-size: 1rem;
+  }
+
+  .cart-icon {
+    align-self: flex-end;
+  }
+}

@@ -1,31 +1,47 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>All Books - BookShop</title>
-  <link rel="stylesheet" href="../CSS/Style.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>BookShop</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/Style.css" />
+  </head>
 <body>
 
   <!-- Navbar -->
   <header class="navbar">
     <div class="logo">BookShop</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="book.html">Books</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="cart.html">Cart</a></li>
-      </ul>
-    </nav>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+    
+    <div id="mobileMenu" class="nav-links">
+      <nav>
+        <ul>
+          <li><a href="login.html">Home</a></li>
+          <li><a href="book.html">Books</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </nav>
+    </div>
+    
     <div class="actions">
-      <input type="text" id="searchBox" placeholder="Search books...">
-      <div class="cart-icon">
+      <div class="search-box">
+        <input type="text" id="searchBox" placeholder="Search books...">
+        <button><i class="fas fa-search"></i></button>
+      </div>
+      <a href="cart.html" class="cart-icon">
         <img src="../assests/images/cart.svg" alt="Cart" width="24">
         <span id="cart-count">0</span>
-      </div>
+      </a>
     </div>
+    
   </header>
 
   <!-- Books Listing -->
